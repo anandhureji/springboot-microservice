@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 /*** interface to declare feign client to call address-service api ***/
 
-@FeignClient(url = "${address.service.url}",value = "address-feign-client",path = "/api/address")
+@FeignClient(value = "addressmicroservice",path = "/api/address")
 public interface AddressFeignClient {
 
     /*** mapping from address controller in the declarative way ***/
