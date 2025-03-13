@@ -10,6 +10,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 @SpringBootApplication
 public class StudentServiceApplication {
 
+	/*** end point of external api ***/
 	@Value("${address.service.url}")
 	public String addressServiceUrl;
 
@@ -18,6 +19,9 @@ public class StudentServiceApplication {
 		SpringApplication.run(StudentServiceApplication.class, args);
 	}
 
+
+
+	/** create WebClient to call external api ***/
 	@Bean
 	public WebClient webClient(){
 

@@ -46,6 +46,8 @@ public class StudentService {
 		return studentResponse;
 	}
 
+	/*** Call webclient to bind the uri ***/
+
 	public AddressResponse getAddressById(long addressId){
 		Mono<AddressResponse> addressResponseMono = webClient.get().uri("/get/"+addressId)
 				.retrieve().bodyToMono(AddressResponse.class);
